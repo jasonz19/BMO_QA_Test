@@ -9,12 +9,13 @@
 5.	Please describe yourself using JSON.
 [{"first_name":"Jaosn",
   "last_name":"Zhang",
-  "email":"jaosnz19@hotmail.com",
+  "email":"jaosn@notreal.com",
   "address":{
-      "stree_number":26,
+      "stree_number":22,
       "city": "Richmond Hill",
       "province": "ON"
       "postcode": "L4G 2S9"
   },
+  "school":"UBC",
   "hobby":["ski", "fishing", "pingpong"],
 }]
