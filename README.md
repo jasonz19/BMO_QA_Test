@@ -20,3 +20,6 @@ This is a protractor project. Protractor is a UI test framwork which is an end-t
 Test report is under tmp\screenshots\
 
 
+Just for fun, add a selenium solution for compare. It is under SeleniumSolution folder.
+
+
