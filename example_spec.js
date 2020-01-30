@@ -32,7 +32,7 @@ describe('Use the website to find restaurants', function() {
 
   it('Search for restaurants with correct area code', function() {
     element(by.name('postcode')).sendKeys("AR51 1AA");
-    element(by.css('[aria-label="Search"]')).click();
+    element(by.xpath("//button[@data-test-id='find-restaurants-button']")).click()
     console.log(browser.getTitle());
     expect(browser.getTitle()).toEqual('Restaurants and takeaways in Area51, AR51 | Just Eat');
   });
@@ -40,7 +40,7 @@ describe('Use the website to find restaurants', function() {
   it('Search for restaurants with invaild postcode', function() {
     element(by.name('postcode')).clear();
     element(by.name('postcode')).sendKeys("L4G 2S9");
-    element(by.css('[aria-label="Search"]')).click();
+    element(by.xpath("//button[@data-test-id='find-restaurants-button']")).click()
     console.log(browser.getTitle());
     // make sure we still at the search page.
     expect(browser.getTitle()).toEqual('Order takeaway online from 30,000+ food delivery restaurants | Just Eat');
@@ -51,7 +51,7 @@ describe('Use the website to find restaurants', function() {
   it('Search for restaurants with invaild special characters.', function() {
     element(by.name('postcode')).clear();
     element(by.name('postcode')).sendKeys("<<!@#$W%^&*()_+ >>");
-    element(by.css('[aria-label="Search"]')).click();
+    element(by.xpath("//button[@data-test-id='find-restaurants-button']")).click()
     console.log(browser.getTitle());
     expect(browser.getTitle()).toEqual('Order takeaway online from 30,000+ food delivery restaurants | Just Eat');
     //check to see error message was display.
